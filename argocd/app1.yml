@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: flag
+  name: landing
   namespace: argocd
 spec:
   project: default
@@ -11,7 +11,7 @@ spec:
     path: app1
   destination:
     server: https://kubernetes.default.svc
-    namespace: flag
+    namespace: landing
   syncPolicy:
     automated:
       prune: true

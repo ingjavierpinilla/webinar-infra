@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: flag
+  name: fastapi
   namespace: argocd
 spec:
   project: default
@@ -11,7 +11,7 @@ spec:
     path: app2
   destination:
     server: https://kubernetes.default.svc
-    namespace: flag
+    namespace: fastapi
   syncPolicy:
     automated:
       prune: true
