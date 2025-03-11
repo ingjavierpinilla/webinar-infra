@@ -20,6 +20,7 @@ spec:
         image: jmpinillag/color-test:latest
         ports:
         - containerPort: 5001
+        imagePullPolicy: Always
         envFrom:
         - configMapRef:
             name: configmap-landing

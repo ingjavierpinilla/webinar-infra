@@ -20,6 +20,7 @@ spec:
         image: jmpinillag/count-fastapi-redis:latest
         ports:
         - containerPort: 5002
+        imagePullPolicy: Always
         envFrom:
         - configMapRef:
             name: configmap-fastapi
