@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: configmap-fastapi
-  namespace: flag
+  namespace: fastapi
 data:
   show_button: "TRUE"
 

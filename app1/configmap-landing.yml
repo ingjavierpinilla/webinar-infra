@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: configmap-landing
-  namespace: flag
+  namespace: landing
 data:
   show_button: "TRUE"
 
