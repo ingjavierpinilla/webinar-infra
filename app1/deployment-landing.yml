@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app-blue
+  name: my-app-landing
   namespace: flag
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: my-app
-      version: blue
+      version: landing
   template:
     metadata:
       labels:
         app: my-app
-        version: blue
+        version: landing
     spec:
       containers:
       - name: my-app
-        image: jmpinillag/count-fastapi-redis:latest
+        image: jmpinillag/color-test:0.0.2
         ports:
         - containerPort: 5001
         envFrom:
         - configMapRef:
-            name: configmap-blue
+            name: configmap-landing
