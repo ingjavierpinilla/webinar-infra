@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-blue
+  namespace: flag
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+      version: blue
+  template:
+    metadata:
+      labels:
+        app: my-app
+        version: blue
+    spec:
+      containers:
+      - name: my-app
+        image: jmpinillag/count-fastapi-redis:latest
+        ports:
+        - containerPort: 5001
+        envFrom:
+        - configMapRef:
+            name: configmap-blue
